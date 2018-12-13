@@ -13,11 +13,10 @@ class TWSExpandableView : LinearLayout {
     }
 
     private var isExpandable = false
-    private lateinit var layoutParams: LinearLayout.LayoutParams
 
     private fun setUpView() {
+        this.layoutTransition = LayoutTransition()
         this.layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
-        toggle(false)
     }
 
     fun makeToggle() {
